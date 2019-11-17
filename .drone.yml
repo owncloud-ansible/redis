@@ -167,4 +167,8 @@ depends_on:
 - testing-centos7
 - documentation
 
+---
+kind: signature
+hmac: 852fe7b9136f60a99b4885f6c877cb5ffa6bf00ed34cb338e65e9ada4b3d3ba2
+
 ...
