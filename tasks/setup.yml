@@ -1,8 +1,15 @@
 ---
+- name: Ensure dependencies are installed
+  package:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ redis_packages_extra }}"
+
 - name: Ensure Redis is installed
   package:
-    name: "{{ redis_package }}"
+    name: "{{ item }}"
     state: present
+  loop: "{{ redis_packages }}"
 
 - name: Ensure Redis is configured
   template:

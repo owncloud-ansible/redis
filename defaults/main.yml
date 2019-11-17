@@ -1,4 +1,11 @@
 ---
+# @var redis_packages:value: $ "_os_specific_"
+
+# @var redis_packages_extra:description: >
+# Can be used to install other dependency packages.
+# @end
+redis_packages_extra: []
+
 redis_port: 6379
 redis_bind_interface: "127.0.0.1"
 # @var redis_unixsocket:value: $ "_unset_"
