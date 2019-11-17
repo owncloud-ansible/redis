@@ -8,7 +8,7 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 def test_redis_running_and_enabled(host):
-    redis = host.service("redis-server")
+    redis = host.service("redis")
 
     assert redis.is_running
     assert redis.is_enabled
