@@ -1,0 +1,14 @@
+---
+- include_vars: "{{ lookup('first_found', params) }}"
+  vars:
+    params:
+      files:
+        - "{{ ansible_os_family | lower }}.yml"
+      paths:
+        - "vars"
+      errors: "ignore"
+- include_tasks: overwrites.yml
+
+- include_tasks: setup.yml
+
+...

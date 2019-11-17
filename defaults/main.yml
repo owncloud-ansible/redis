@@ -1,0 +1,63 @@
+---
+redis_port: 6379
+redis_bind_interface: "127.0.0.1"
+# @var redis_unixsocket:value: $ "_unset_"
+redis_timeout: 300
+
+redis_loglevel: "notice"
+redis_logfile: /var/log/redis/redis-server.log
+
+redis_databases: 16
+
+# @var redis_save:description: >
+# Set to an empty set to disable persistence (saving the DB to disk).
+# @end
+redis_save:
+  - 900 1
+  - 300 10
+  - 60 10000
+
+redis_rdbcompression: "yes"
+redis_dbfilename: dump.rdb
+redis_dbdir: /var/lib/redis
+
+redis_maxmemory: 0
+redis_maxmemory_policy: "noeviction"
+redis_maxmemory_samples: 5
+
+redis_appendonly: "no"
+redis_appendfsync: "everysec"
+
+# @var redis_includes:description: >
+# Add extra include files for local configuration/overrides.
+# @end
+redis_includes: []
+
+# @var redis_requirepass:description: >
+# Require authentication to Redis with a password.
+# @end
+# @var redis_requirepass:value: $ "_unset_"
+
+# @var redis_disabled_commands:description: >
+# Disable certain Redis commands for security reasons.
+# @end
+redis_disabled_commands: []
+# @var redis_disabled_commands:example: >
+# redis_disabled_commands:
+#   - FLUSHDB
+#   - FLUSHALL
+#   - KEYS
+#   - PEXPIRE
+#   - DEL
+#   - CONFIG
+#   - SHUTDOWN
+#   - BGREWRITEAOF
+#   - BGSAVE
+#   - SAVE
+#   - SPOP
+#   - SREM
+#   - RENAME
+#   - DEBUG
+# @end
+
+...

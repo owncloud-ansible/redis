@@ -1,0 +1,20 @@
+---
+- name: Ensure Redis is installed
+  package:
+    name: "{{ redis_package }}"
+    state: present
+
+- name: Ensure Redis is configured
+  template:
+    src: redis.conf.j2
+    dest: "{{ redis_conf_path }}"
+    mode: 0644
+  notify: __redis_restart
+
+- name: Ensure Redis is up and running
+  service:
+    name: "{{ redis_daemon }}"
+    state: started
+    enabled: yes
+
+...

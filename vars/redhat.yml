@@ -1,0 +1,6 @@
+---
+__redis_package: redis
+__redis_daemon: redis
+__redis_conf_path: /etc/redis.conf
+
+...

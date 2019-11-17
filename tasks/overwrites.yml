@@ -1,0 +1,17 @@
+---
+- name: Define redis_package
+  set_fact:
+    redis_package: "{{ __redis_package }}"
+  when: redis_package is not defined
+
+- name: Define redis_daemon
+  set_fact:
+    redis_daemon: "{{ __redis_daemon }}"
+  when: redis_daemon is not defined
+
+- name: Define redis_conf_path
+  set_fact:
+    redis_conf_path: "{{ __redis_conf_path }}"
+  when: redis_conf_path is not defined
+
+...
