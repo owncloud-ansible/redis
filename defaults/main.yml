@@ -1,4 +1,8 @@
 ---
+# @var redis_packages:description: >
+# Define a custom list of packages to install. Default value depends
+# on your operating system.
+# @end
 # @var redis_packages:value: $ "_os_specific_"
 
 # @var redis_packages_extra:description: >
