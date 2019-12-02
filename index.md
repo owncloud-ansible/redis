@@ -2,7 +2,10 @@
 title: redis
 type: docs
 ---
-Ansible role to setup Redis server
+
+> **WARNING**: This Ansible role is currently in beta state. Use it at your own risk. 
+
+Role to setup Redis server.
 
 * [Default Variables](#default-variables)
   * [redis_appendfsync](#redis-appendfsync)
@@ -94,20 +97,20 @@ redis_disabled_commands: []
 
 ```YAML
 redis_disabled_commands:
-  - FLUSHDB
-  - FLUSHALL
-  - KEYS
-  - PEXPIRE
-  - DEL
-  - CONFIG
-  - SHUTDOWN
-  - BGREWRITEAOF
-  - BGSAVE
-  - SAVE
-  - SPOP
-  - SREM
-  - RENAME
-  - DEBUG
+- FLUSHDB
+- FLUSHALL
+- KEYS
+- PEXPIRE
+- DEL
+- CONFIG
+- SHUTDOWN
+- BGREWRITEAOF
+- BGSAVE
+- SAVE
+- SPOP
+- SREM
+- RENAME
+- DEBUG
 ```
 
 ### redis_includes
