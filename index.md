@@ -12,6 +12,7 @@ Role to setup Redis server.
 * [Default Variables](#default-variables)
   * [redis_appendfsync](#redis-appendfsync)
   * [redis_appendonly](#redis-appendonly)
+  * [redis_apt_cache_update](#redis-apt-cache-update)
   * [redis_bind_interface](#redis-bind-interface)
   * [redis_databases](#redis-databases)
   * [redis_dbdir](#redis-dbdir)
@@ -51,6 +52,16 @@ redis_appendfsync: everysec
 
 ```YAML
 redis_appendonly: no
+```
+
+### redis_apt_cache_update
+
+Automatically update apt cache on package installations. This setting will only applied on apt-based operating systems e.g. Ubuntu.
+
+#### Default value
+
+```YAML
+redis_apt_cache_update: false
 ```
 
 ### redis_bind_interface
