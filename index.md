@@ -3,7 +3,9 @@ title: redis
 type: docs
 ---
 
-> **WARNING**: This Ansible role is currently in beta state. Use it at your own risk. 
+[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/owncloud-ansible/redis) [![Build Status](https://drone.owncloud.com/api/badges/owncloud-ansible/redis/status.svg)](https://drone.owncloud.com/owncloud-ansible/redis) [![GitHub](https://img.shields.io/github/license/owncloud-ansible/redis)](https://github.com/owncloud-ansible/redis/blob/master/LICENSE) 
+
+{{< hint warning >}} __Warning__<br/> This Ansible role is currently in beta state. Use it at your own risk. {{< /hint >}} 
 
 Role to setup Redis server.
 
@@ -97,20 +99,20 @@ redis_disabled_commands: []
 
 ```YAML
 redis_disabled_commands:
-- FLUSHDB
-- FLUSHALL
-- KEYS
-- PEXPIRE
-- DEL
-- CONFIG
-- SHUTDOWN
-- BGREWRITEAOF
-- BGSAVE
-- SAVE
-- SPOP
-- SREM
-- RENAME
-- DEBUG
+  - FLUSHDB
+  - FLUSHALL
+  - KEYS
+  - PEXPIRE
+  - DEL
+  - CONFIG
+  - SHUTDOWN
+  - BGREWRITEAOF
+  - BGSAVE
+  - SAVE
+  - SPOP
+  - SREM
+  - RENAME
+  - DEBUG
 ```
 
 ### redis_includes
