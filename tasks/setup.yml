@@ -2,12 +2,14 @@
 - name: Ensure dependencies are installed
   package:
     name: "{{ item }}"
+    update_cache: "{{ redis_apt_cache_update }}"
     state: present
   loop: "{{ redis_packages_extra }}"
 
 - name: Ensure Redis is installed
   package:
     name: "{{ item }}"
+    update_cache: "{{ redis_apt_cache_update }}"
     state: present
   loop: "{{ redis_packages }}"
 

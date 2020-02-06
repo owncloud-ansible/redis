@@ -1,4 +1,10 @@
 ---
+# @var redis_apt_cache_update:description: >
+# Automatically update apt cache on package installations.
+# This setting will only applied on apt-based operating systems e.g. Ubuntu.
+# @end
+redis_apt_cache_update: False
+
 # @var redis_packages:description: >
 # Define a custom list of packages to install. Default value depends
 # on your operating system.
