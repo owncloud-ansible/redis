@@ -146,6 +146,7 @@ local PipelineNotification = {
 [
     PipelineLinting,
     PipelineTesting(scenario="ubuntu1804"),
+    PipelineTesting(scenario="ubuntu2004"),
     PipelineTesting(scenario="centos7"),
     PipelineDocumentation,
     PipelineNotification,

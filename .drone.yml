@@ -56,6 +56,42 @@ depends_on:
 
 ---
 kind: pipeline
+name: testing-ubuntu2004
+
+platform:
+  os: linux
+  arch: amd64
+
+concurrency:
+  limit: 1
+
+workspace:
+  base: /drone/src
+  path: redis
+
+steps:
+- name: molecule
+  image: xoxys/molecule:hcloud-linux-amd64
+  commands:
+  - /bin/bash /docker-entrypoint.sh
+  - molecule test -s ubuntu2004
+  environment:
+    HCLOUD_TOKEN:
+      from_secret: hcloud_token
+    PY_COLORS: 1
+    USER: root
+
+trigger:
+  ref:
+  - refs/heads/master
+  - refs/tags/**
+  - refs/pull/**
+
+depends_on:
+- linting
+
+---
+kind: pipeline
 name: testing-centos7
 
 platform:
@@ -177,6 +213,6 @@ depends_on:
 
 ---
 kind: signature
-hmac: 671221dd4e6ad8037304280094c1ca9167bad4fe75bb500ceff7240fd0dce2a6
+hmac: 8d53fa8a7b026e30d24faae158893df06af10101b4a0503b89aa88d8e9753849
 
 ...
