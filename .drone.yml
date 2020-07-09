@@ -178,6 +178,7 @@ trigger:
 
 depends_on:
 - testing-ubuntu1804
+- testing-ubuntu2004
 - testing-centos7
 
 ---
@@ -208,11 +209,12 @@ trigger:
 depends_on:
 - linting
 - testing-ubuntu1804
+- testing-ubuntu2004
 - testing-centos7
 - documentation
 
 ---
 kind: signature
-hmac: 8d53fa8a7b026e30d24faae158893df06af10101b4a0503b89aa88d8e9753849
+hmac: ea43bb536300c4442fc3efa2731098320ead28011ff49602e176b09b3071e56c
 
 ...
