@@ -42,7 +42,6 @@ local PipelineTesting(scenario="ubuntu1804") = {
                 PY_COLORS: 1,
             },
             commands: [
-                "/bin/bash /docker-entrypoint.sh",
                 "molecule test -s " + scenario,
             ],
         },
