@@ -8,7 +8,7 @@ local PipelineLinting = {
     steps: [
         {
             name: "later",
-            image: "xoxys/ansible-later:latest",
+            image: "xoxys/ansible-later",
             commands: [
                 "ansible-later",
             ],
@@ -36,10 +36,9 @@ local PipelineTesting(scenario="ubuntu1804") = {
     steps: [
         {
             name: "molecule",
-            image: "xoxys/molecule:hcloud-linux-amd64",
+            image: "xoxys/molecule:3",
             environment: {
                 HCLOUD_TOKEN: { from_secret: "hcloud_token" },
-                USER: "root",
                 PY_COLORS: 1,
             },
             commands: [
@@ -66,7 +65,7 @@ local PipelineDocumentation = {
     steps: [
         {
             name: "generate",
-            image: "xoxys/ansible-doctor:latest",
+            image: "xoxys/ansible-doctor",
             environment: {
                 ANSIBLE_DOCTOR_LOG_LEVEL: "INFO",
                 ANSIBLE_DOCTOR_FORCE_OVERWRITE: true,
@@ -77,7 +76,7 @@ local PipelineDocumentation = {
         },
         {
             name: "publish",
-            image: "plugins/gh-pages:latest",
+            image: "plugins/gh-pages",
             settings: {
                 username: { from_secret: "github_username" },
                 password: { from_secret: "github_token" },
