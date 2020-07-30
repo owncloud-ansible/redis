@@ -1,9 +1,5 @@
 ---
 - name: Converge
   hosts: all
-  vars:
-    redis_packages_extra:
-      - epel-release
-
   roles:
     - role: redis
