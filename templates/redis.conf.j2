@@ -1,8 +1,8 @@
 #jinja2: lstrip_blocks: True
 {{ ansible_managed | comment }}
 
-daemonize yes
-pidfile /var/run/redis/{{ redis_daemon }}.pid
+daemonize {{ redis_daemonize }}
+pidfile {{ redis_pidfile }}
 port {{ redis_port }}
 bind {{ redis_bind_interface }}
 {% if redis_unixsocket is defined and redis_unixsocket %}
