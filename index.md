@@ -82,11 +82,7 @@ redis_databases: 16
 
 ### redis_dbdir
 
-#### Default value
-
-```YAML
-redis_dbdir: /var/lib/redis
-```
+Can be used to change the redis dbdir path
 
 ### redis_dbfilename
 
@@ -138,11 +134,7 @@ redis_includes: []
 
 ### redis_logfile
 
-#### Default value
-
-```YAML
-redis_logfile: /var/log/redis/redis-server.log
-```
+Can be used to change the redis log file path
 
 ### redis_loglevel
 
