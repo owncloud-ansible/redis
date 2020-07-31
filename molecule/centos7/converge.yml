@@ -3,7 +3,7 @@
   hosts: all
   vars:
     redis_packages_extra:
-      - epel-release
+      - centos-release-scl
 
   roles:
     - role: redis

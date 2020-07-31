@@ -14,4 +14,24 @@
     redis_conf_path: "{{ __redis_conf_path }}"
   when: redis_conf_path is not defined
 
+- name: Define redis_dbdir
+  set_fact:
+    redis_dbdir: "{{ __redis_dbdir }}"
+  when: redis_dbdir is not defined
+
+- name: Define redis_daemonize
+  set_fact:
+    redis_daemonize: '{{ __redis_daemonize }}'
+  when: redis_daemonize is not defined
+
+- name: Define redis_logfile
+  set_fact:
+    redis_logfile: "{{ __redis_logfile }}"
+  when: redis_logfile is not defined
+
+- name: Define redis_pidfile
+  set_fact:
+    redis_pidfile: "{{ __redis_pidfile }}"
+  when: redis_pidfile is not defined
+
 ...

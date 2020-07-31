@@ -22,7 +22,9 @@ redis_bind_interface: "127.0.0.1"
 redis_timeout: 300
 
 redis_loglevel: "notice"
-redis_logfile: /var/log/redis/redis-server.log
+# @var redis_logfile:description: >
+# Can be used to change the redis log file path
+# @end
 
 redis_databases: 16
 
@@ -36,7 +38,9 @@ redis_save:
 
 redis_rdbcompression: "yes"
 redis_dbfilename: dump.rdb
-redis_dbdir: /var/lib/redis
+# @var redis_dbdir:description: >
+# Can be used to change the redis dbdir path
+# @end
 
 redis_maxmemory: 0
 redis_maxmemory_policy: "noeviction"
