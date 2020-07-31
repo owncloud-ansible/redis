@@ -1,7 +1,7 @@
 #jinja2: lstrip_blocks: True
 {{ ansible_managed | comment }}
 
-daemonize {{ redis_daemonize }}
+daemonize "{{ 'yes' if redis_daemonize | bool else 'no' }}"
 pidfile {{ redis_pidfile }}
 port {{ redis_port }}
 bind {{ redis_bind_interface }}
