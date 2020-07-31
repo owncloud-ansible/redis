@@ -5,7 +5,7 @@ __redis_daemon: redis-server
 __redis_conf_path: /etc/redis/redis.conf
 
 __redis_dbdir: /var/lib/redis
-__redis_daemonize: yes
+__redis_daemonize: "yes"
 __redis_logfile: /var/log/redis/redis.log
 __redis_pidfile: /var/run/redis/redis-server.pid
 

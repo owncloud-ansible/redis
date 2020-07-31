@@ -21,7 +21,7 @@
 
 - name: Define redis_daemonize
   set_fact:
-    redis_daemonize: "{{ __redis_daemonize }}"
+    redis_daemonize: '{{ __redis_daemonize }}'
   when: redis_daemonize is not defined
 
 - name: Define redis_logfile
