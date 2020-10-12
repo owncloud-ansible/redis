@@ -2,6 +2,7 @@
 {{ ansible_managed | comment }}
 
 daemonize "{{ 'yes' if redis_daemonize | bool else 'no' }}"
+supervised {{ redis_supervised }}
 pidfile {{ redis_pidfile }}
 port {{ redis_port }}
 bind {{ redis_bind_interface }}
