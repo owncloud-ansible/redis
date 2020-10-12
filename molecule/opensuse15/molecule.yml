@@ -7,9 +7,10 @@ dependency:
 driver:
   name: delegated
 platforms:
-  - name: centos-7-redis
+  - name: opensuse-15-redis
     server_type: cx11
-    image: centos-7
+    image: 24146372
+    from_snapshot: true
 lint: |
   /usr/local/bin/flake8
 provisioner:
