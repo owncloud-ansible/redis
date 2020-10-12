@@ -26,8 +26,8 @@
 
 - name: Define redis_supervised
   set_fact:
-    redis_daemonize: '{{ __redis_supervised }}'
-  when: redis_supervised is not defined
+    redis_supervised: '{{ __redis_supervised }}'
+  when: redis_supervised | string is not defined
 
 - name: Define redis_logfile
   set_fact:
