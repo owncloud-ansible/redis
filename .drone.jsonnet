@@ -109,6 +109,7 @@ local PipelineDocumentation = {
     'testing-ubuntu1804',
     'testing-ubuntu2004',
     'testing-centos7',
+    'testing-opensuse15',
   ],
 };
 
