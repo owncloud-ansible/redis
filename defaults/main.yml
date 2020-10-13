@@ -80,5 +80,3 @@ redis_disabled_commands: []
 #   - RENAME
 #   - DEBUG
 # @end
-
-...
