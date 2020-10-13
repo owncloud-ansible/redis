@@ -26,7 +26,8 @@
 
 - name: Define redis_supervised
   set_fact:
-    redis_supervised: "{{ __redis_supervised }}"
+    # double quotes as workaround for https://github.com/ansible/ansible/issues/42599
+    redis_supervised: "'{{ __redis_supervised }}'"
   when: redis_supervised is not defined
 
 - name: Define redis_logfile

@@ -6,7 +6,6 @@ __redis_conf_path: /etc/redis/redis.conf
 
 __redis_dbdir: /var/lib/redis
 __redis_daemonize: "yes"
-# prettier-ignore
-__redis_supervised: 'no'
+__redis_supervised: "no"
 __redis_logfile: /var/log/redis/redis.log
 __redis_pidfile: /var/run/redis/redis-server.pid
