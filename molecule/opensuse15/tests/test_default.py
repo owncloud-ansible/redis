@@ -3,12 +3,11 @@ import os
 import testinfra.utils.ansible_runner
 
 testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
-    os.environ['MOLECULE_INVENTORY_FILE']
-).get_hosts('all')
+    os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
 def test_redis_running_and_enabled(host):
-    redis = host.service("redis-server")
+    redis = host.service("redis@default")
 
     assert redis.is_running
     assert redis.is_enabled

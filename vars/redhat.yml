@@ -5,9 +5,8 @@ __redis_daemon: rh-redis5-redis
 __redis_conf_path: /etc/opt/rh/rh-redis5/redis.conf
 
 __redis_dbdir: /var/opt/rh/rh-redis5/lib/redis
-__redis_daemonize: no
-__redis_supervised: no
+__redis_daemonize: "no"
+# prettier-ignore
+__redis_supervised: 'no'
 __redis_logfile: /var/opt/rh/rh-redis5/log/redis/redis.log
 __redis_pidfile: /var/opt/rh/rh-redis5/run/redis_6379.pid
-
-...
