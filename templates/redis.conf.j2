@@ -1,7 +1,8 @@
 #jinja2: lstrip_blocks: True
 {{ ansible_managed | comment }}
 
-daemonize "{{ 'yes' if redis_daemonize | bool else 'no' }}"
+daemonize {{ redis_daemonize | bool | ternary("yes", "no") }}
+supervised {{ redis_supervised }}
 pidfile {{ redis_pidfile }}
 port {{ redis_port }}
 bind {{ redis_bind_interface }}
@@ -27,7 +28,7 @@ databases {{ redis_databases }}
 save {{ save }}
 {% endfor %}
 
-rdbcompression {{ redis_rdbcompression }}
+rdbcompression {{ redis_rdbcompression | bool | ternary("yes", "no") }}
 dbfilename {{ redis_dbfilename }}
 dir {{ redis_dbdir }}
 
@@ -39,7 +40,7 @@ maxmemory-policy {{ redis_maxmemory_policy }}
 maxmemory-samples {{ redis_maxmemory_samples }}
 {% endif %}
 
-appendonly {{ redis_appendonly }}
+appendonly {{ redis_appendonly | bool | ternary("yes", "no") }}
 appendfsync {{ redis_appendfsync }}
 no-appendfsync-on-rewrite no
 {% if redis_includes %}

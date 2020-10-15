@@ -10,5 +10,3 @@
 - include_tasks: overwrites.yml
 
 - include_tasks: setup.yml
-
-...

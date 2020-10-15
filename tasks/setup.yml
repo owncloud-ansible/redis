@@ -25,5 +25,3 @@
     name: "{{ redis_daemon }}"
     state: started
     enabled: yes
-
-...
