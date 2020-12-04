@@ -7,7 +7,7 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 def test_redis_running_and_enabled(host):
-    redis = host.service("rh-redis5-redis")
+    redis = host.service("redis")
 
     assert redis.is_running
     assert redis.is_enabled
@@ -15,9 +15,9 @@ def test_redis_running_and_enabled(host):
 
 def test_redis_config(host):
     assert "127.0.0.1" in host.run(
-        "/opt/rh/rh-redis5/root/usr/bin/redis-cli config get bind").stdout
+        "/usr/bin/redis-cli config get bind").stdout
     assert "6379" in host.run(
-        "/opt/rh/rh-redis5/root/usr/bin/redis-cli config get port").stdout
+        "/usr/bin/redis-cli config get port").stdout
 
     assert "300" in host.run(
-        "/opt/rh/rh-redis5/root/usr/bin/redis-cli config get timeout").stdout
+        "/usr/bin/redis-cli config get timeout").stdout
