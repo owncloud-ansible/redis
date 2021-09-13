@@ -99,7 +99,6 @@ local PipelineRelease = {
       settings: {
         overwrite: true,
         api_key: { from_secret: 'github_token' },
-        files: ['dist/*', 'sha256sum.txt'],
         title: '${DRONE_TAG}',
         note: 'CHANGELOG.md',
       },
