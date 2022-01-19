@@ -41,7 +41,7 @@ local PipelineLinting = {
   },
 };
 
-local PipelineTesting(scenario='ubuntu1804') = {
+local PipelineTesting(scenario='ubuntu2004') = {
   kind: 'pipeline',
   name: 'testing-' + scenario,
   platform: {
@@ -204,7 +204,6 @@ local PipelineNotification = {
 
 [
   PipelineLinting,
-  PipelineTesting(scenario='ubuntu1804'),
   PipelineTesting(scenario='ubuntu2004'),
   PipelineTesting(scenario='centos7'),
   PipelineTesting(scenario='centos8'),
