@@ -205,7 +205,6 @@ trigger:
   - refs/pull/**
 
 depends_on:
-- testing-ubuntu1804
 - testing-ubuntu2004
 - testing-centos7
 - testing-centos8
@@ -294,6 +293,6 @@ depends_on:
 
 ---
 kind: signature
-hmac: fb069f9043521cf637bd2305b7d8d461b22e429c184b3a998a613f9666bae6c2
+hmac: 6363ed0947c14082c8d47b5cfb98352e755836235acfb4ea15b0e82e3434ef4e
 
 ...
