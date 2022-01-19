@@ -104,7 +104,7 @@ depends_on:
 
 ---
 kind: pipeline
-name: testing-centos8
+name: testing-rocky8
 
 platform:
   os: linux
@@ -121,7 +121,7 @@ steps:
 - name: molecule
   image: thegeeklab/molecule:3
   commands:
-  - molecule test -s centos8
+  - molecule test -s rocky8
   environment:
     HCLOUD_TOKEN:
       from_secret: hcloud_token
@@ -207,7 +207,7 @@ trigger:
 depends_on:
 - testing-ubuntu2004
 - testing-centos7
-- testing-centos8
+- testing-rocky8
 - testing-opensuse15
 
 ---
@@ -293,6 +293,6 @@ depends_on:
 
 ---
 kind: signature
-hmac: 6363ed0947c14082c8d47b5cfb98352e755836235acfb4ea15b0e82e3434ef4e
+hmac: a0f076d70f2187275dbdae0c9b900ebb3fa3fa6ff345abc9cc4a8fc028eb7501
 
 ...

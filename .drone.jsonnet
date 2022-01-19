@@ -110,7 +110,7 @@ local PipelineRelease = {
   depends_on: [
     'testing-ubuntu2004',
     'testing-centos7',
-    'testing-centos8',
+    'testing-rocky8',
     'testing-opensuse15',
   ],
   trigger: {
@@ -205,7 +205,7 @@ local PipelineNotification = {
   PipelineLinting,
   PipelineTesting(scenario='ubuntu2004'),
   PipelineTesting(scenario='centos7'),
-  PipelineTesting(scenario='centos8'),
+  PipelineTesting(scenario='rocky8'),
   PipelineTesting(scenario='opensuse15'),
   PipelineRelease,
   PipelineDocumentation,
