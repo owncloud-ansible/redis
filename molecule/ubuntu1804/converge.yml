@@ -1,8 +1,0 @@
----
-- name: Converge
-  hosts: all
-  vars:
-    redis_apt_cache_update: True
-
-  roles:
-    - role: redis
