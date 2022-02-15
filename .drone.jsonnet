@@ -37,7 +37,7 @@ local PipelineLinting = {
     },
   ],
   trigger: {
-    ref: ['refs/heads/master', 'refs/tags/**', 'refs/pull/**'],
+    ref: ['refs/heads/main', 'refs/tags/**', 'refs/pull/**'],
   },
 };
 
@@ -69,7 +69,7 @@ local PipelineTesting(scenario='ubuntu2004') = {
     },
   ],
   trigger: {
-    ref: ['refs/heads/master', 'refs/tags/**', 'refs/pull/**'],
+    ref: ['refs/heads/main', 'refs/tags/**', 'refs/pull/**'],
   },
   depends_on: [
     'linting',
@@ -147,7 +147,7 @@ local PipelineDocumentation = {
         target_branch: 'docs',
       },
       when: {
-        ref: ['refs/heads/master'],
+        ref: ['refs/heads/main'],
       },
     },
     {
@@ -162,12 +162,12 @@ local PipelineDocumentation = {
         ],
       },
       when: {
-        ref: ['refs/heads/master'],
+        ref: ['refs/heads/main'],
       },
     },
   ],
   trigger: {
-    ref: ['refs/heads/master', 'refs/tags/**', 'refs/pull/**'],
+    ref: ['refs/heads/main', 'refs/tags/**', 'refs/pull/**'],
   },
   depends_on: [
     'release',
@@ -192,7 +192,7 @@ local PipelineNotification = {
     },
   ],
   trigger: {
-    ref: ['refs/heads/master', 'refs/tags/**'],
+    ref: ['refs/heads/main', 'refs/tags/**'],
     status: ['success', 'failure'],
   },
   depends_on: [
