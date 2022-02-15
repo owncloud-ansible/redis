@@ -246,7 +246,7 @@ steps:
     settings:
       fork: true
       repositories:
-        - owncloud-ansible/owncloud-ansible.github.io@source
+        - owncloud-ansible/owncloud-ansible.github.io@main
       server: https://drone.owncloud.com
       token:
         from_secret: drone_token
@@ -293,6 +293,6 @@ depends_on:
 
 ---
 kind: signature
-hmac: 87cfb0283e1c1278e1d58b59f0fdfb5ddc5636fa1f46d938ee7216e59a5c1f8f
+hmac: 8ece82098addbb6ded7dcf88cb75e03dd0d028840224bb4b5168b3be35f8e9dc
 
 ...

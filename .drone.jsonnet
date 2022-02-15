@@ -158,7 +158,7 @@ local PipelineDocumentation = {
         token: { from_secret: 'drone_token' },
         fork: true,
         repositories: [
-          'owncloud-ansible/owncloud-ansible.github.io@source',
+          'owncloud-ansible/owncloud-ansible.github.io@main',
         ],
       },
       when: {
