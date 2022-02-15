@@ -3,7 +3,7 @@ title: redis
 type: docs
 ---
 
-[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/owncloud-ansible/redis) [![Build Status](https://drone.owncloud.com/api/badges/owncloud-ansible/redis/status.svg)](https://drone.owncloud.com/owncloud-ansible/redis) [![GitHub](https://img.shields.io/github/license/owncloud-ansible/redis)](https://github.com/owncloud-ansible/redis/blob/master/LICENSE) 
+[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/owncloud-ansible/redis) [![Build Status](https://drone.owncloud.com/api/badges/owncloud-ansible/redis/status.svg)](https://drone.owncloud.com/owncloud-ansible/redis) [![GitHub](https://img.shields.io/github/license/owncloud-ansible/redis)](https://github.com/owncloud-ansible/redis/blob/main/LICENSE) 
 
 {{< hint warning >}} __Warning__<br/> This Ansible role is currently in beta state. Use it at your own risk. {{< /hint >}} 
 
