@@ -3,36 +3,36 @@ title: redis
 type: docs
 ---
 
-[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/owncloud-ansible/redis) [![Build Status](https://drone.owncloud.com/api/badges/owncloud-ansible/redis/status.svg)](https://drone.owncloud.com/owncloud-ansible/redis) [![GitHub](https://img.shields.io/github/license/owncloud-ansible/redis)](https://github.com/owncloud-ansible/redis/blob/main/LICENSE) 
+[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/owncloud-ansible/redis) [![Build Status](https://drone.owncloud.com/api/badges/owncloud-ansible/redis/status.svg)](https://drone.owncloud.com/owncloud-ansible/redis) [![GitHub](https://img.shields.io/github/license/owncloud-ansible/redis)](https://github.com/owncloud-ansible/redis/blob/main/LICENSE)
 
-{{< hint warning >}} __Important__<br/> We have switched to 'main' as default branch. The 'master' branch is no longer maintained and will be removed after March 31, 2022! {{< /hint >}} 
+{{< hint warning >}} __Important__<br/> We have switched to 'main' as default branch. The 'master' branch is no longer maintained and will be removed after March 31, 2022! {{< /hint >}}
 
 Role to setup Redis server.
 
-* [Default Variables](#default-variables)
-  * [redis_appendfsync](#redis_appendfsync)
-  * [redis_appendonly](#redis_appendonly)
-  * [redis_apt_cache_update](#redis_apt_cache_update)
-  * [redis_bind_interface](#redis_bind_interface)
-  * [redis_databases](#redis_databases)
-  * [redis_dbdir](#redis_dbdir)
-  * [redis_dbfilename](#redis_dbfilename)
-  * [redis_disabled_commands](#redis_disabled_commands)
-  * [redis_includes](#redis_includes)
-  * [redis_logfile](#redis_logfile)
-  * [redis_loglevel](#redis_loglevel)
-  * [redis_maxmemory](#redis_maxmemory)
-  * [redis_maxmemory_policy](#redis_maxmemory_policy)
-  * [redis_maxmemory_samples](#redis_maxmemory_samples)
-  * [redis_packages](#redis_packages)
-  * [redis_packages_extra](#redis_packages_extra)
-  * [redis_port](#redis_port)
-  * [redis_rdbcompression](#redis_rdbcompression)
-  * [redis_requirepass](#redis_requirepass)
-  * [redis_save](#redis_save)
-  * [redis_timeout](#redis_timeout)
-  * [redis_unixsocket](#redis_unixsocket)
-* [Dependencies](#dependencies)
+- [Default Variables](#default-variables)
+  - [redis_appendfsync](#redis_appendfsync)
+  - [redis_appendonly](#redis_appendonly)
+  - [redis_apt_cache_update](#redis_apt_cache_update)
+  - [redis_bind_interface](#redis_bind_interface)
+  - [redis_databases](#redis_databases)
+  - [redis_dbdir](#redis_dbdir)
+  - [redis_dbfilename](#redis_dbfilename)
+  - [redis_disabled_commands](#redis_disabled_commands)
+  - [redis_includes](#redis_includes)
+  - [redis_logfile](#redis_logfile)
+  - [redis_loglevel](#redis_loglevel)
+  - [redis_maxmemory](#redis_maxmemory)
+  - [redis_maxmemory_policy](#redis_maxmemory_policy)
+  - [redis_maxmemory_samples](#redis_maxmemory_samples)
+  - [redis_packages](#redis_packages)
+  - [redis_packages_extra](#redis_packages_extra)
+  - [redis_port](#redis_port)
+  - [redis_rdbcompression](#redis_rdbcompression)
+  - [redis_requirepass](#redis_requirepass)
+  - [redis_save](#redis_save)
+  - [redis_timeout](#redis_timeout)
+  - [redis_unixsocket](#redis_unixsocket)
+- [Dependencies](#dependencies)
 
 ---
 
@@ -242,6 +242,8 @@ redis_timeout: 300
 ```YAML
 redis_unixsocket: _unset_
 ```
+
+
 
 ## Dependencies
 
