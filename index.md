@@ -5,7 +5,7 @@ type: docs
 
 [![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/owncloud-ansible/redis) [![Build Status](https://drone.owncloud.com/api/badges/owncloud-ansible/redis/status.svg)](https://drone.owncloud.com/owncloud-ansible/redis) [![GitHub](https://img.shields.io/github/license/owncloud-ansible/redis)](https://github.com/owncloud-ansible/redis/blob/main/LICENSE)
 
-{{< hint warning >}} __Important__<br/> We have switched to 'main' as default branch. The 'master' branch is no longer maintained and will be removed after March 31, 2022! {{< /hint >}}
+{{< hint type=warning >}} We have switched to 'main' as default branch. The 'master' branch is no longer maintained and will be removed after March 31, 2022! {{< /hint >}}
 
 Role to setup Redis server.
 
