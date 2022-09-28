@@ -112,6 +112,7 @@ local PipelineRelease = {
     'testing-centos7',
     'testing-rocky8',
     'testing-opensuse15',
+    'testing-debian11',
   ],
   trigger: {
     ref: ['refs/heads/main', 'refs/tags/**', 'refs/pull/**'],
@@ -207,6 +208,7 @@ local PipelineNotification = {
   PipelineTesting(scenario='centos7'),
   PipelineTesting(scenario='rocky8'),
   PipelineTesting(scenario='opensuse15'),
+  PipelineTesting(scenario='debian11'),
   PipelineRelease,
   PipelineDocumentation,
   PipelineNotification,

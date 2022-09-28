@@ -172,6 +172,40 @@ depends_on:
 
 ---
 kind: pipeline
+name: testing-debian11
+
+platform:
+  os: linux
+  arch: amd64
+
+concurrency:
+  limit: 1
+
+workspace:
+  base: /drone/src
+  path: redis
+
+steps:
+  - name: molecule
+    image: thegeeklab/molecule:3
+    commands:
+      - molecule test -s debian11
+    environment:
+      HCLOUD_TOKEN:
+        from_secret: hcloud_token
+      PY_COLORS: 1
+
+trigger:
+  ref:
+    - refs/heads/main
+    - refs/tags/**
+    - refs/pull/**
+
+depends_on:
+  - linting
+
+---
+kind: pipeline
 name: release
 
 platform:
@@ -209,6 +243,7 @@ depends_on:
   - testing-centos7
   - testing-rocky8
   - testing-opensuse15
+  - testing-debian11
 
 ---
 kind: pipeline
@@ -293,6 +328,6 @@ depends_on:
 
 ---
 kind: signature
-hmac: 8ece82098addbb6ded7dcf88cb75e03dd0d028840224bb4b5168b3be35f8e9dc
+hmac: 34bdef932a311ec6826159aa17bd1e21fb0327281d7e5a17c8b5093e6a84df56
 
 ...
